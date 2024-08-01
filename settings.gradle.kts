@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RetrofitPlaylist"
+rootProject.name = "ChuckerDemo"
 include(":app")
  

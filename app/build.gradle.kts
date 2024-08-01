@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.mukesh.retrofitplaylist"
+    namespace = "com.mukesh.chuckerDemo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.mukesh.retrofitplaylist"
+        applicationId = "com.mukesh.chuckerDemo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -24,6 +24,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 
@@ -60,6 +61,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2")
 
+    //Chucker
+    debugImplementation("com.github.chuckerteam.chucker:library:4.0.0")
+    releaseImplementation("com.github.chuckerteam.chucker:library-no-op:4.0.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
